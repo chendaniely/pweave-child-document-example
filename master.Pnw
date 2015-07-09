@@ -1,0 +1,63 @@
+\documentclass{book}
+\usepackage{standalone}
+\usepackage{hyperref}
+
+\title{Scipy 2015 Lightning: Literate Programming}
+\author{Daniel Chen\\
+Virginia Tech\\
+Genetics, Bioinformatics, and Computational Biology\\
+Virginia Bioinformatics Institute\\
+Social and Decision Analytics Laboratory}
+\date{July 9 , 2015}
+
+\begin{document}
+
+\maketitle
+
+%% my document content
+
+\chapter{The Main Document}
+This is the master document.
+
+Example of printing a calculation
+<<results = 'rst'>>=
+print(3 + 3)
+@
+
+Example of saving a variable...
+<<results = 'rst'>>=
+s = "hello world"
+@
+
+... and performing an opration on the variable
+<<results = 'rst'>>=
+print(s.split())
+@
+
+Setting the variable 's' to "hello scipy"
+<<echo=False>>=
+s = "hello scipy"
+@
+
+and then using the variable
+
+<<>>=
+for character in s:
+    print(character)
+@
+
+
+\chapter{Child Document}
+\label{chap:child_document}
+\input{child}
+
+%% more of my document content
+
+\chapter{Python and Plots}
+\label{chap:child_plot}
+\input{child_figure}
+
+
+End master document
+
+\end{document}

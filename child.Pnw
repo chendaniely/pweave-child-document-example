@@ -1,0 +1,17 @@
+\documentclass{standalone}
+% Preamble
+
+\begin{document}
+
+%% my chapter content
+
+Answer to life the universe and everything:
+
+\label{py:hitch}
+<<results = 'rst'>>=
+print(21 + 21)
+@
+
+%% more of my chapter content
+
+\end{document}
